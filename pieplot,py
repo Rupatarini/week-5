@@ -1,0 +1,15 @@
+import matplotlib.pyplot as plt
+import numpy as np
+overs = [5, 10, 15, 20, 30, 40, 50]
+india_wickets = [1, 12, 20, 27, 34, 46, 49]
+sri_lanka_wickets = [3, 9, 29, 33, 35, 47, 50]
+labels = overs
+fig, axs = plt.subplots(1, 2, figsize=(7, 6))
+colors_india = plt.cm.Blues(np.linspace(0.2, 0.8, len(india_wickets)))
+axs[0].pie(india_wickets, labels=labels, autopct='%1.1f%%', startangle=140, colors=colors_india)
+axs[0].set_title('Wickets Fallen by India')
+colors_sri_lanka = plt.cm.Reds(np.linspace(0.2, 0.8, len(sri_lanka_wickets)))
+axs[1].pie(sri_lanka_wickets, labels=labels, autopct='%1.1f%%', startangle=140, colors=colors_sri_lanka)
+axs[1].set_title('Wickets Fallen by Sri Lanka')
+plt.tight_layout()
+plt.show()
