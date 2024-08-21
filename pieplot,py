@@ -12,4 +12,4 @@ colors_sri_lanka = plt.cm.Reds(np.linspace(0.2, 0.8, len(sri_lanka_wickets)))
 axs[1].pie(sri_lanka_wickets, labels=labels, autopct='%1.1f%%', startangle=140, colors=colors_sri_lanka)
 axs[1].set_title('Wickets Fallen by Sri Lanka')
 plt.tight_layout()
-plt.show()
+plt.show
